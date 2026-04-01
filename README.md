@@ -308,9 +308,6 @@ The core insight: a **normal** protein graph should reconstruct faithfully and t
 
 ---
 
-##  Author Notes
-
-This implementation was developed for GSoC 2026 ML4Sci preparation, targeting the project *"Deep Graph Anomaly Detection with Contrastive Learning for New Physics Searches"*. The Stable-ChebNet GVAE framework here directly mirrors the architecture in the referenced papers, with the GVAE reconstruction + representational loss formulation designed to surface anomalous protein graphs that deviate from learned structural priors.
 
 ---
 
