@@ -6,7 +6,7 @@ Based on:
 - *Return of ChebNet: Understanding and Improving an Overlooked GNN on Long-Range Tasks* — Ali Hariri
 - *Graph learning for capturing long-range dependencies in protein structures* — Ali Hariri, Pierre Vandergheynst (EPFL)
 ![alt text](image.png)
-<img width="800" height="520" alt="image" src="https://github.com/user-attachments/assets/752c182e-4a15-401e-a992-d4f7259ff2fd" />
+<img width="800" height="520" alt="image" align="center" src="https://github.com/user-attachments/assets/752c182e-4a15-401e-a992-d4f7259ff2fd" />
 
 
 ---
