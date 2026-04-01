@@ -18,36 +18,36 @@ This project applies **Stable-ChebNet**, a theoretically grounded spectral GNN, 
 
 ##  Architecture
 
-```
-Input Protein Graph G = (X, A)
-         │
-         ▼
+``` 
+    Input Protein Graph G = (X, A)
+                  │
+                  ▼
 ┌─────────────────────────────────────────┐
-│          Stable-ChebNet Encoder          │
-│                                          │
-│  X^(l+1) = X^(l) + ε · Σ_k T_k(L̃)    │
-│            X^(l) (W_k − W_k^T − γI)    │
-│                                          │
+│          Stable-ChebNet Encoder         │
+│                                         │
+│  X^(l+1) = X^(l) + ε · Σ_k T_k(L̃)       │
+│            X^(l) (W_k − W_k^T − γI)     │
+│                                         │
 │  → Z_node  [N × d_latent]               │
 │  → Z_g     [1 × d_latent]  (mean pool)  │
 └─────────────────────────────────────────┘
-         │
-         ▼
+                  │
+                  ▼
 ┌─────────────────────────────────────────┐
-│               Decoder                    │
-│  MLP(Z_node)  → X̂  (node features)     │
-│  σ(Z·Zᵀ)     → Â  (adjacency)          │
+│               Decoder                   │
+│  MLP(Z_node)  → X̂  (node features)      │
+│  σ(Z·Zᵀ)     → Â  (adjacency)           │
 └─────────────────────────────────────────┘
-         │
-         ▼
+                  │
+                  ▼
 ┌─────────────────────────────────────────┐
-│    Shared Stable-ChebNet Re-Encoder      │
-│  (same weights as Encoder)               │
+│    Shared Stable-ChebNet Re-Encoder     │
+│  (same weights as Encoder)              │
 │  → Ẑ_node, Z_g'                         │
 └─────────────────────────────────────────┘
-         │
-         ▼
-   Loss = L1 + λ · L3
+                  │
+                  ▼
+         Loss = L1 + λ · L3
 ```
 
 ### Why Stable-ChebNet?
